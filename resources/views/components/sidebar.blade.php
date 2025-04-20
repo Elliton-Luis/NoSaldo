@@ -3,12 +3,12 @@
     <hr>
     <ul class="nav nav-pills nav-flush flex-column mb-auto">
         <li class="nav-item">
-            <a href="/inicio" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
+            <a href="{{route('home.index')}}" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
                 <i class="bi bi-house-door fs-4"></i> <span class="ms-2">Início</span>
             </a>
         </li>
         <li>
-            <a href="/despesas" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
+            <a href="{{route('financial.expenses')}}" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
                 <i class="bi bi-wallet2 fs-4"></i> <span class="ms-2">Despesas</span>
             </a>
         </li>

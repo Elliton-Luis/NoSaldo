@@ -15,12 +15,12 @@
                 const ctx = document.getElementById('myChart');
 
                 new Chart(ctx, {
-                    type: 'bar',
+                    type: 'line',
                     data: {
-                    labels: ['Despesas', 'Ganhos'],
+                    labels: ['Inicio do Mês','Fim do Mês'],
                     datasets: [{
-                        label: 'sei lá',
-                        data: [26, 19,],
+                        label: 'Valor',
+                        data: [26, 19,34,12,2,3,4],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(75, 192, 192, 0.2)',

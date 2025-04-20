@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FinancialController;
 
 Route::get('/',[LoginController::class,'showLogin'])->name('login.index');
 Route::post('/auth',[LoginController::class,'authUser'])->name('login.auth');
 
 Route::get('/home',[HomeController::class,'showHome'])->name('home.index');
+Route::get('/despesas',[FinancialController::class,'showExpenses'])->name('financial.expenses');
