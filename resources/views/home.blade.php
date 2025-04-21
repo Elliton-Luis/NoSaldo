@@ -1,12 +1,10 @@
 @extends('layouts.default')
-@extends('components.sidebar')
 @section('title','home')
 @section('content')
-    <div class="container mt-5 w-100">
-        <div class="p-4 shadow rounded w-100">
-            <div>
+            <div class="">
                 <h1 class="text-center">Análise de Perfil</h1>
                 <canvas class="h-75" id="myChart"></canvas>
+                Sesgo
             </div>
 
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -17,7 +15,7 @@
                 new Chart(ctx, {
                     type: 'line',
                     data: {
-                    labels: ['Inicio do Mês','Fim do Mês'],
+                    labels: ['Inicio do Mês','hamburguer','Fim do Mês'],
                     datasets: [{
                         label: 'Valor',
                         data: [26, 19,34,12,2,3,4],
@@ -51,7 +49,4 @@
                     }
                 });
             </script>
-
-        </div>
-    </div>
 @endsection
