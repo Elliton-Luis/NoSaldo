@@ -3,44 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <title>Login - NoSaldo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body class="d-flex justify-content-center align-items-center bg-light vh-100">
-    <div class="container p-4 rounded bg-dark text-white shadow" style="max-width: 400px;">
-        <h3 class="text-center mb-4">Login</h3>
-        @if(Session::has('errorAuth'))
-        <div class="alert alert-danger" role="alert">
-            {{Session::get('errorAuth')}}
+    <div class="container p-4 rounded-4 bg-white shadow-lg" style="max-width: 400px;">
+        <div class="text-center mb-4">
+            <i class="bi bi-box-arrow-in-right fs-1 text-primary"></i>
+            <h3 class="mt-2 text-dark">Bem-vindo</h3>
+            <p class="text-muted">Faça login para continuar</p>
         </div>
 
+        @if(Session::has('errorAuth'))
+        <div class="alert alert-danger" role="alert">
+            {{ Session::get('errorAuth') }}
+        </div>
         @endif
+
         <form method="POST" action="auth">
             @csrf
+
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
+                <label class="form-label text-dark">Email</label>
                 <div class="input-group">
-                    <span class="input-group-text bg-secondary text-white">
-                        <i class="bi bi-person-fill"></i>
+                    <span class="input-group-text bg-primary text-white">
+                        <i class="bi bi-envelope-fill"></i>
                     </span>
-                    <input type="email" id="email" class="form-control" name="email" placeholder="Digite seu email" required>
+                    <input type="email" class="form-control" name="email" placeholder="exemplo@email.com" required>
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="password" class="form-label">Senha</label>
+            <div class="mb-2">
+                <label class="form-label text-dark">Senha</label>
                 <div class="input-group">
-                    <span class="input-group-text bg-secondary text-white">
+                    <span class="input-group-text bg-primary text-white">
                         <i class="bi bi-lock-fill"></i>
                     </span>
-                    <input type="password" id="password" class="form-control" name="password" placeholder="Digite sua senha" required>
+                    <input type="password" class="form-control" name="password" id="passwordInput" placeholder="********" required>
+                    <span class="input-group-text bg-primary text-white" id="togglePassword" style="cursor: pointer;">
+                        <i class="bi bi-eye-fill" id="eyeIcon"></i>
+                    </span>
                 </div>
             </div>
-            <button type="submit" class="btn btn-light w-100">Entrar</button>
+
+            <div class="d-flex justify-content-end mb-3">
+                <a href="/esqueciSenha" class="text-decoration-none small text-primary">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mb-3">
+                <i class="bi bi-box-arrow-in-right me-1"></i> Entrar
+            </button>
+
+            <div class="text-center">
+                <span class="text-muted">Não tem uma conta?</span>
+                <a href="{{login.cadastro}}" class="text-primary fw-semibold text-decoration-none">Cadastre-se</a>
+            </div>
         </form>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('passwordInput');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        togglePassword.addEventListener('click', () => {
+            const type = passwordInput.type === 'password' ? 'text' : 'password';
+            passwordInput.type = type;
+            eyeIcon.classList.toggle('bi-eye-fill');
+            eyeIcon.classList.toggle('bi-eye-slash-fill');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
