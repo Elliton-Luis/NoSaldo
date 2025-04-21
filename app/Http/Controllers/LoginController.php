@@ -16,7 +16,7 @@ class LoginController extends Controller
         if(Auth::attempt($dados)){
             return redirect('home')->with('success','Usuário Logado Com Sucesso!');
         }
-        return redirect()->back()->with('errorAuth','Email ou Senha Incorretos');
+        return redirect()->back()->with('error','Email ou Senha Incorretos');
     }
 
     public function logoutUser(Request $request){

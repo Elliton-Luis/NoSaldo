@@ -15,9 +15,9 @@
             <p class="text-muted">Faça login para continuar</p>
         </div>
 
-        @if(Session::has('errorAuth'))
+        @if(Session::has('error'))
         <div class="alert alert-danger" role="alert">
-            {{ Session::get('errorAuth') }}
+            {{ Session::get('error') }}
         </div>
         @endif
 
@@ -57,7 +57,7 @@
 
             <div class="text-center">
                 <span class="text-muted">Não tem uma conta?</span>
-                <a href={{"login.cadastro"}} class="text-primary fw-semibold text-decoration-none">Cadastre-se</a>
+                <a href={{route('login.register')}} class="text-primary fw-semibold text-decoration-none">Cadastre-se</a>
             </div>
         </form>
     </div>
