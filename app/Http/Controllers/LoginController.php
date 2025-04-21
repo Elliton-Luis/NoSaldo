@@ -18,4 +18,15 @@ class LoginController extends Controller
         }
         return redirect()->back()->with('errorAuth','Email ou Senha Incorretos');
     }
+
+    public function logoutUser(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login.index')->with('success','Usuário Deslogado com Sucesso');
+    }
+
+    public function showRegister(){
+        return view('register');
+    }
 }

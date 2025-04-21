@@ -57,7 +57,7 @@
 
             <div class="text-center">
                 <span class="text-muted">Não tem uma conta?</span>
-                <a href="{{login.cadastro}}" class="text-primary fw-semibold text-decoration-none">Cadastre-se</a>
+                <a href={{"login.cadastro"}} class="text-primary fw-semibold text-decoration-none">Cadastre-se</a>
             </div>
         </form>
     </div>
