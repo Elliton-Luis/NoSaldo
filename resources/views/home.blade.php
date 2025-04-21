@@ -15,7 +15,7 @@
                 new Chart(ctx, {
                     type: 'line',
                     data: {
-                    labels: ['Inicio do Mês','hamburguer','Fim do Mês'],
+                    labels: ['Inicio do Mês','hamburguer','prostituta','Fim do Mês'],
                     datasets: [{
                         label: 'Valor',
                         data: [26, 19,34,12,2,3,4],

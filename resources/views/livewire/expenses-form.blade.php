@@ -1,10 +1,6 @@
-@extends('layouts.default')
-@section('title','despesas')
-@section('content')
-
-<div class="mx-auto my-5 p-5 border border-primary rounded" style="max-width: 600px;">
-    <form method="POST" action="/despesas/analisar">
+<form method="POST" action="/despesas/analisar">
         @csrf
+        <h1 class="text-center">Gastos</h1>
 
         <div class="mb-3">
             <label class="form-label">Nome</label>
@@ -34,27 +30,28 @@
             <label class="form-label">Tipo</label>
             <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-sliders"></i></span>
-                <select class="form-select" name="tipo" required>
+                <select class="form-select" name="tipo" required wire:model.lazy="type">
                     <option value="" disabled selected>Selecione o tipo</option>
-                    <option value="fixo">Fixo</option>
-                    <option value="variavel">Variável</option>
+                    <option value="variable">Variável</option>
+                    <option value="fix">Fixo</option>
                 </select>
             </div>
         </div>
-
+    @if ($type == 'fix')
         <div class="mb-3">
-            <label class="form-label">Frequência</label>
-            <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-repeat"></i></span>
-                <select class="form-select" name="frequencia" required>
-                    <option value="" disabled selected>Selecione a frequência</option>
-                    <option value="daily">Diário</option>
-                    <option value="weekly">Semanal</option>
-                    <option value="monthly">Mensal</option>
-                    <option value="annualy">Anual</option>
-                </select>
-            </div>
+                <label class="form-label">Frequência</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-repeat"></i></span>
+                    <select class="form-select" name="frequencia" required>
+                        <option value="" disabled selected>Selecione a frequência</option>
+                        <option value="daily">Diário</option>
+                        <option value="weekly">Semanal</option>
+                        <option value="monthly">Mensal</option>
+                        <option value="annualy">Anual</option>
+                    </select>
+                </div>
         </div>
+    @endif
 
         <div class="mb-3">
             <label class="form-label">Data de Pagamento</label>
@@ -66,6 +63,3 @@
 
         <button type="submit" class="btn btn-primary w-100">Salvar Despesa</button>
     </form>
-</div>
-
-@endsection

@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 class FinancialController extends Controller
 {
     public function showExpenses(){
-        return view('livewire.expenses-form');
+        return view('expenses');
+    }
+
+    public function showIncomes(){
+        return view('incomes');
     }
 }

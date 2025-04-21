@@ -9,7 +9,7 @@
         </li>
         <li>
             <a href="{{route('financial.expenses')}}" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
-                <i class="bi bi-wallet2 fs-4"></i> <span class="ms-2">Despesas</span>
+                <i class="bi bi-wallet2 fs-4"></i> <span class="ms-2">Gastos</span>
             </a>
         </li>
         <li>

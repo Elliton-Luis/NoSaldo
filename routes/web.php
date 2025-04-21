@@ -11,7 +11,9 @@ Route::post('/auth',[LoginController::class,'authUser'])->name('login.auth');
 Route::get('/logout',[LoginController::class,'logoutUser'])->name('login.logout');
 Route::get('/cadastro',[LoginController::class,'showRegiseter'])->name('login.register');
 
-Route::get('/home',[HomeController::class,'showHome'])->name('home.index');
-Route::get('/despesas',[FinancialController::class,'showExpenses'])->name('financial.expenses');
-
+Route::middleware(CheckIsLogged::class)->group(function(){
+    Route::get('/home',[HomeController::class,'showHome'])->name('home.index');
+    Route::get('/despesas',[FinancialController::class,'showExpenses'])->name('financial.expenses');
+    Route::get('/ganhos',[FinancialController::class,'showIncomes'])->name('financial.incomes');
+});
     
