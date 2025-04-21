@@ -6,4 +6,5 @@
     @livewire('expenses-form')
 </div>
 
+
 @endsection

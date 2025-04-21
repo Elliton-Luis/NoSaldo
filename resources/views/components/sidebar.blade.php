@@ -24,7 +24,7 @@
         </li>
         <li>
             <a href="/compras" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
-                <i class="bi bi-cart-fill fs-4"></i> <span class="ms-2">Lista de Compras</span>
+                <i class="bi bi-cart-fill fs-4"></i> <span class="ms-2">Lista de Desejos</span>
             </a>
         </li>
     </ul>
