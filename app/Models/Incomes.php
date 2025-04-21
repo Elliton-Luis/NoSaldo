@@ -4,13 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WishList extends Model
+class Incomes extends Model
 {
     protected $fillable = [
         'user_id',
-        'item_name',
-        'price',
+        'amount',
         'description',
-        'priority'
+        'received_at'
     ];
 }
