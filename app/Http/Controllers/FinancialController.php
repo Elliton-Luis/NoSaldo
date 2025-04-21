@@ -15,6 +15,14 @@ class FinancialController extends Controller
         return view('incomes');
     }
 
+    public function showWishlist(){
+        return view('wishlist');
+    }
+
+    public function showGoals(){
+        return view('goals');
+    }
+
     public function storeExpenses(Request $request){
         $dados = $request->except('_token');
         Expenses::create([
