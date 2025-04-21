@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('expenses', function (Blueprint $table) {
@@ -17,6 +14,7 @@ return new class extends Migration
             $table->decimal('price',10,2);
             $table->string('description')->nullable();
             $table->enum('type',['fixed','variable']);
+            $table->enum('category',['food','utility','fun','other']);
             $table->enum('frequency',['daily','weekly','monthly','annualy'])->nullable();
             $table->date('due_date')->nullable();
             $table->timestamps();

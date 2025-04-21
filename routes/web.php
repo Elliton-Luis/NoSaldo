@@ -15,5 +15,6 @@ Route::middleware(CheckIsLogged::class)->group(function(){
     Route::get('/home',[HomeController::class,'showHome'])->name('home.index');
     Route::get('/despesas',[FinancialController::class,'showExpenses'])->name('financial.expenses');
     Route::get('/ganhos',[FinancialController::class,'showIncomes'])->name('financial.incomes');
+    Route::post('/storeExpenses',[FinancialController::class,'storeExpenses'])->name('store.expenses');
 });
     

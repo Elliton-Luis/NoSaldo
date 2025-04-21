@@ -1,52 +1,84 @@
 @extends('layouts.default')
 @section('title','home')
 @section('content')
-            <div class="">
                 <h1 class="text-center">Análise de Perfil</h1>
-                <canvas class="h-75" id="myChart"></canvas>
-                Sesgo
-            </div>
+                    <div class="container my-4">
+                    <div class="card border-0 shadow-sm p-3">
+                        <h5 class="mb-3">
+                            <i class="bi bi-graph-up-arrow me-2 text-primary"></i>Resumo de Gastos
+                        </h5>
+                        
+                        <ul class="list-group list-group-flush">
 
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-currency-dollar me-2 text-danger"></i>Total Gasto</span>
+                            <span class="fw-bold">R$ 2.350,80</span>
+                            </li>
 
-            <script>
-                const ctx = document.getElementById('myChart');
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-tags me-2 text-warning"></i>Categoria Predominante</span>
+                            <span>Alimentação</span>
+                            </li>
 
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                    labels: ['Inicio do Mês','hamburguer','prostituta','Fim do Mês'],
-                    datasets: [{
-                        label: 'Valor',
-                        data: [26, 19,34,12,2,3,4],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(255, 205, 86, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(201, 203, 207, 0.2)'
-                            ],
-                            borderColor: [
-                            'rgb(255, 99, 132)',
-                            'rgb(75, 192, 192)',
-                            'rgb(255, 159, 64)',
-                            'rgb(255, 205, 86)',
-                            'rgb(54, 162, 235)',
-                            'rgb(153, 102, 255)',
-                            'rgb(201, 203, 207)'
-                            ],
-                        borderWidth: 5,
-                    }]
-                    },
-                    options: {
-                        scales: {
-                                y: {
-                                beginAtZero: true
-                                }
-                    }
-                    }
-                });
-            </script>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-clock-history me-2 text-info"></i>Frequência Predominante</span>
+                            <span>Semanal</span>
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span><i class="bi bi-calendar-event me-2 text-muted"></i>Último Pagamento</span>
+                            <span>20/04/2025</span>
+                            </li>
+
+                        </ul>
+                        </div>
+
+
+                        <div class="container my-4">
+                        <div class="card border-0 shadow-sm p-3">
+                            <h5 class="mb-3"><i class="bi bi-piggy-bank me-2 text-success"></i>Resumo de Ganhos</h5>
+                            
+                            <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-currency-dollar me-2 text-success"></i>Total Ganho</span>
+                                <span class="fw-bold">R$ 5.780,00</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-chat-left-text me-2 text-primary"></i>Última Descrição</span>
+                                <span>Freelance de site</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-calendar-check me-2 text-muted"></i>Último Recebimento</span>
+                                <span>18/04/2025</span>
+                            </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </div>
+
+                        <div class="container my-4">
+                            <div class="card border-0 shadow-sm p-3">
+                                <h5 class="mb-3">
+                                    <i class="bi bi-calculator me-2 text-dark"></i>Análise Final
+                                </h5>
+
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="bi bi-dash-circle me-2 text-danger"></i>Diferença (Ganhos - Gastos)</span>
+                                        <span class="fw-bold text-success">R$ 3.429,20</span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="bi bi-bank me-2 text-primary"></i>Total Acumulado</span>
+                                        <span class="fw-bold">R$ 8.500,00</span>
+                                    </li>
+
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="bi bi-cash-coin me-2 text-success"></i>Saldo Atual Estimado</span>
+                                        <span class="fw-bold text-primary">R$ 11.929,20</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
 @endsection
