@@ -1,5 +1,5 @@
-<div>                 
-    <div class="card shadow-sm border-0">
+<div class="d-flex flex-column gap-3">                
+    <div class="card shadow-sm border-0 h-25">
         <div class="card-body d-flex flex-column gap-2">
               <div class="d-flex align-items-center justify-content-between">
                 <h5 class="mb-0"><i class="bi bi-receipt me-2"></i>Netflix</h5>
