@@ -9,7 +9,7 @@
 </head>
 <body class="d-block d-md-flex flex-nowrap min-vh-100" style="margin-left:13vw;">
     @extends('components.sidebar')
-    <div class="container mt-5 h-100 vh-100">
+    <div class="container mt-5">
         <div class="p-4 shadow rounded w-100">
             @yield('content')
         </div>
