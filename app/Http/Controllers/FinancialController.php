@@ -23,13 +23,8 @@ class FinancialController extends Controller
         return view('goals');
     }
 
-    public function storeExpenses(Request $request){
-        $dados = $request->except('_token');
-        Expenses::create([
-            'price'=>$dados['price'],
-            'description'=>$dados['description'],
-            'due_date'=>$dados['due_date'],
-            'type'=>$dados['type']
-        ]);
+    public function showHistoric(){
+        return view('historic');
     }
+
 }

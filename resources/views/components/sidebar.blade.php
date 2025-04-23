@@ -14,7 +14,7 @@
         </li>
         <li>
             <a href="{{route('financial.incomes')}}" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
-                <i class="bi bi-cash-coin fs-4"></i> <span class="ms-2">Ganhos</span>
+                <i class="bi bi-cash fs-4"></i> <span class="ms-2">Ganhos</span>
             </a>
         </li>
         <li>
@@ -25,6 +25,11 @@
         <li>
             <a href="{{route('financial.wishlist')}}" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
                 <i class="bi bi-cart-fill fs-4"></i> <span class="ms-2">Lista de Desejos</span>
+            </a>
+        </li>
+        <li>
+            <a href="{{route('financial.historic')}}" class="nav-link text-white py-3 border-bottom btn btn-secondary text-start" data-bs-toggle="tooltip" data-bs-placement="right">
+                <i class="bi bi-clock-history fs-4"></i> <span class="ms-2">Histórico de Gastos</span>
             </a>
         </li>
     </ul>
