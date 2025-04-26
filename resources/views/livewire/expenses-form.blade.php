@@ -71,6 +71,14 @@
         </div>
     </div>
 
+    <div class="mb-3">
+        <label class="form-label">Parcelas</label>
+        <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-currency-dollar"></i></span>
+            <input type="number" class="form-control" wire:model="" placeholder="Ex: 1" required>
+        </div>
+    </div>
+
     <div class="mb-4">
         <label class="form-label">Data de Pagamento</label>
         <div class="input-group">
