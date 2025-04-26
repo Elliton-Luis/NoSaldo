@@ -43,9 +43,9 @@ class ExpensesForm extends Component
             'frequency'=>$this->frequency,
             'category'=>$this->category
         ]);
+        $this->dispatch('storeExpenses');
         session()->flash('success','Despesa Criada com Sucesso');
         $this->reset();
-        $this->dispatch('storeExpenses');
     }
 
 }

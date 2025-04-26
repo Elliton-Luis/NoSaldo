@@ -1,4 +1,4 @@
-<div class="d-flex flex-column flex-shrink-0 p-3 bg-dark text-white" style="width: 250px; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1050;">
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-dark text-white" style="width: 16vw; height: 100vh; position: fixed; top: 0; left: 0; z-index: 1050;">
     <h2 class="text-center">NoSaldo</h2>
     <hr>
     <ul class="nav nav-pills nav-flush flex-column mb-auto">
